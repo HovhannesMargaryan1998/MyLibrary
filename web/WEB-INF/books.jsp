@@ -47,7 +47,7 @@
 
         <td>
 
-            <a href="books/remove?bookId=<%=book.getId()%>" Remove></a> |
+            <a href="books/remove?bookId=<%=book.getId()%>">Remove</a> |
             <a href="books/edit?bookId=<%=book.getId()%>">Edit</a>
 
         </td>
