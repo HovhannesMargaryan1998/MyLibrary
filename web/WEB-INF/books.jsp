@@ -1,11 +1,5 @@
 <%@ page import="model.Book" %>
-<%@ page import="java.util.List" %><%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 06.09.2022
-  Time: 0:57
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -17,6 +11,7 @@
 %>
 <table border="1">
     <tr>
+        <th>profilePic</th>
         <th>id</th>
         <th>title</th>
         <th>description</th>
@@ -30,6 +25,13 @@
 
     %>
     <tr>
+        <td>
+        <%if (book.getProfilePic() == null || book.getProfilePic().length() == 0) {%>
+        <img src="\image\defaultprofileimage.png" width="100"/>
+        <%} else {%>
+        <img src="/getImage?profilePic=<%=book.getProfilePic()%> " width="100"/>
+            <%}%></td>
+
         <td><%=book.getId()%>
         </td>
         <td><%=book.getTitle()%>

@@ -16,7 +16,7 @@
 
 %>
 Please input book's data:
-<form action="/books/add" method="post">
+<form action="/books/add" method="post" enctype="multipart/form-data">
     <input type="text" name="title" placeholder="please input title"/><br>
     <input type="text" name="description" placeholder="please input description"/><br>
     <input type="number" name="price" placeholder="please input price"/> <br>
@@ -26,6 +26,8 @@ Please input book's data:
         </option>
         <% }%>
     </select>
+    Profile Picture:
+    <input type="file" name="profilePic">
     <input type="submit" value="Register">
 </form>
 </body>

@@ -27,7 +27,13 @@
     <%
         for (Author author : authors) {
     %>
-    <tr>
+
+    <tr>    <td><%if (author.getProfilePic() == null || author.getProfilePic().length() == 0) {%>
+        <img src="\image\defaultprofileimage.jpg" width="100"/>
+        <%} else {%>
+        <img src="/getImage?profilePic=<%=author.getProfilePic()%> " width="100"/>
+        <%}%></td>
+
         <td><%=author.getId()%>
         </td>
         <td><%=author.getName()%>
